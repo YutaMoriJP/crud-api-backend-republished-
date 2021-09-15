@@ -20,7 +20,8 @@ app.use(`/users/`, userRouter);
 app.get("/", (req, res) => res.send(`Backend is up and running`));
 
 //connect to mongodb
-const dbURI = process.env.DB_URI;
+const dbURI =
+  "mongodb+srv://yutamori:6PHgL3QcR8VZtc9@apitest.3n8be.mongodb.net/userinformation?retryWrites=true&w=majority";
 //mongoose.connect is an asynchronous task that takes time, so it returns a promise
 mongoose
   .connect(dbURI, {
